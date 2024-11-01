@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+<body>
+    <input type="number" id="valor-de-x" placeholder="digite um numero">
+    <button id="botão" onclick="equação()">Calcular</button>
+
+    <script>
+        function equação(){
+            var x = Number(window.document.getElementById('valor-de-x').value)
+            var resultado = []
+            var y;
+            
+
+            do{
+                if (x%2===0){
+                    y = x/2
+                    
+                }
+
+                else{
+                     y = 3*x+1
+                
+                }
+                resultado.push(y)
+                x = y
+
+            } while(y!==1)
+            document.write(resultado.join(" ? "))
+        }
+
+    </script>
+    
+</body>
+</html>
