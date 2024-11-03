@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <p>Escreva uma função que retorne o fatorial do número passado como
+        parâmetro. Para o valor 4 o resultado deve ser 24.</p><br>
+    <input type="number" id="num_txt">
+    <button id="botão" onclick="clicar()">calcular</button>
+    
+    <script>
+        var num_txt = window.document.getElementById('num_txt')
+        function clicar(){
+        var num = Number(num_txt.value)
+        var fatorial = 1
+        while(num>0){
+            fatorial = fatorial* num
+            num--
+        }
+        document.write(fatorial)
+        }
+       
+    </script>
+</body>
+</html>

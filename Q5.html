@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <p>Escreva uma função que receba 6 parâmetros (3 notas, 3 pesos) e mostre a
+        média. Para os parâmetros (10, 9, 8, 3, 2, 5) o resultado deve ser 8.8.</p><br>
+
+    <div name="nota 1">
+        <input type="number" id="nota_1" placeholder="Nota 1">
+        <input type="number" id="peso_1" placeholder="Peso 1">
+
+    </div><br>
+    <div name="nota 2">
+        <input type="number" id="nota_2" placeholder="Nota 2">
+        <input type="number" id="peso_2" placeholder="Peso 2">
+    </div><br>
+    <div name="nota 3">
+        <input type="number" id="nota_3" placeholder="Nota 3">
+        <input type="number" id="peso_3" placeholder="Peso 3">
+    </div><br>
+    <button id="botão" onclick="media()">Calcular</button>
+
+    <script>
+        /*Variaveis sem converter*/
+        var nota_1 = window.document.getElementById('nota_1')
+        var peso_1 = window.document.getElementById('peso_1')
+
+        var nota_2 = window.document.getElementById('nota_2')
+        var peso_2 = window.document.getElementById('peso_2')
+
+        var nota_3 = window.document.getElementById('nota_3')
+        var peso_3 = window.document.getElementById('peso_3')
+
+        /*Variaveis convertidas*/
+        
+
+        /*calculo da media*/
+        
+        function media() {
+            var n1 = Number(nota_1.value)
+        var p1 = Number(peso_1.value)
+
+        var n2 = Number(nota_2.value)
+        var p2 = Number(peso_2.value)
+
+        var n3 = Number(nota_3.value)
+        var p3 = Number(peso_3.value)
+            var cal1 = n1 * p1
+            var cal2 = n2 * p2
+            var cal3 = n3 * p3
+            var media = (cal1 + cal2 + cal3)/(p1 + p2 + p3)
+            document.write(`O resultado é: ${media}`)
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

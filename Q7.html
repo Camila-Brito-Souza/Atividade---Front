@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+</head>
+<body>
+    <p>Escreva uma função que receba 2 parâmetros, e retorne a soma do
+        intervalo de valores destes parâmetros. Para os parâmetros (5, 10) o
+        resultado deve ser 45.</p><br>
+    <input type="number" id="numero_1" placeholder="digite o primeiro numero">
+    <input type="number" id="numero_2" placeholder="digite o segundo numero">
+    <button id="botão" onclick="soma()">Calcular</button>
+
+    <script>
+        
+
+        function soma(){
+            var n1 = Number(window.document.getElementById('numero_1').value)
+
+            var n2 = Number(window.document.getElementById('numero_2').value)
+
+            var soma_efetiva = 0
+
+            var menor = Math.min(n1, n2)
+            var maior = Math.max(n1, n2)
+
+            for(var i = menor; i <= maior; i++){
+                soma_efetiva += i
+            
+            }
+
+            document.write(soma_efetiva)
+            alert(soma_efetiva)
+            
+        }
+       
+    </script>
+</body>
+</html>
