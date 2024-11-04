@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+<body>
+    <p>Escreva um programa que, dada uma variável x, temos y de acordo com a
+        seguinte regra:
+        1. se x é par: y = x / 2 <br>
+        2. se x é impar: y = 3 * x + 1 <br>
+        3. imprime y <br><br> O programa deve então jogar o valor de y em x e continuar até que y tenha o
+        valor final de 1.
+        Por exemplo, para x = 13, a saída será: <br> 40 ? 20 ? 10 ? 5 ? 16 ? 8 ? 4 ? 2 ? 1.</p><br>
+    <input type="number" id="valor-de-x" placeholder="digite um numero">
+    <button id="botão" onclick="equação()">Calcular</button>
+
+    <script>
+        function equação(){
+            var x = Number(window.document.getElementById('valor-de-x').value)
+            var resultado = []
+            var y;
+            
+
+            do{
+                var resto_x = x%2
+                switch (resto_x) {
+                    case 0:
+                        y = x/2
+                        break
+
+                    case 1:
+                    y = 3*x+1
+                    break
+                }
+                resultado.push(y)
+                x = y
+
+            } while(y!==1)
+            document.write(resultado.join(" ? "))
+        }
+
+    </script>
+    
+</body>
+</html>
